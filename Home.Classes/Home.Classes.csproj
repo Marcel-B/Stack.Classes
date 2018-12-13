@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>b-velop</Authors>
     <PackageLicenseUrl>https://b-velop.com</PackageLicenseUrl>
     <Owners>Marcel Benders</Owners>
@@ -11,7 +11,7 @@
     <Title>Home.Classes</Title>
     <Description>Class Library</Description>
     <PackageId>Home.Classes</PackageId>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <ReleaseVersion>1.0.2</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <RootNamespace>com.b_velop.Home.Classes</RootNamespace>
     <RestoreSources>https://nuget.marcelbenders.de/;~/source/packages/$(Configuration)/;https://api.nuget.org/v3/index.json</RestoreSources>
