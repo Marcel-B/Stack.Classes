@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using System.Globalization;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.Globalization;
 
-namespace com.marcelbenders.Home.Classes
+namespace com.b_velop.Home.Classes
 {
     internal static class ConverterValue
     {
