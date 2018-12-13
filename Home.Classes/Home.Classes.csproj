@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>b-velop</Authors>
     <PackageLicenseUrl>https://b-velop.com</PackageLicenseUrl>
     <Owners>Marcel Benders</Owners>
@@ -11,10 +11,10 @@
     <Title>Home.Classes</Title>
     <Description>Class Library</Description>
     <PackageId>Home.Classes</PackageId>
-    <ReleaseVersion>1.0.0.0</ReleaseVersion>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <RootNamespace>com.b_velop.Home.Classes</RootNamespace>
-    <RestoreSources>$(RestoreSources);/usr/src/packages/$(Configuration)/;~/source/$(Configuration)/;https://api.nuget.org/v3/index.json</RestoreSources>
+    <RestoreSources>https://nuget.marcelbenders.de/;~/source/packages/$(Configuration)/;https://api.nuget.org/v3/index.json</RestoreSources>
   </PropertyGroup>
   
   <Target Name="CopyPackage" AfterTargets="Pack">
