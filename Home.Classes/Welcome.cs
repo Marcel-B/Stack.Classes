@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace com.marcelbenders.Home.Classes
+namespace com.b_velop.Home.Classes
 {
     public partial class Welcome
     {
