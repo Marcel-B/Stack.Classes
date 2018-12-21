@@ -13,7 +13,9 @@ namespace com.b_velop.Home.Classes
             Temperature = -9999;
             Pressure = -9999;
             TemperatureBmp = -9999;
+ 
         }
+
 
         public DateTimeOffset Time { get; set; }
         public double SdsP1 { get; set; }
@@ -22,7 +24,11 @@ namespace com.b_velop.Home.Classes
         public double Temperature { get; set; }
         public double Pressure { get; set; }
         public double TemperatureBmp { get; set; }
-
+        public double MaxMicro {get;set;}
+        public double MinMicro {get;set;}
+        public double Samples {get;set;}
+        public double Signal {get;set;}
+        
         public static string SdsP1Fk() => "2063272:SDS_P1";
         public static string SdsP2Fk() => "2063272:SDS_P2"; 
         public static string HumidityFk() => "2063272:humidity";
