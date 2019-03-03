@@ -17,4 +17,23 @@ node ('marcelbenders.de'){
         }
         updateGitlabCommitStatus name: 'clean', state: 'pending', sha: commitId
     }
+
+    try{
+        stage('Restore') {
+            updateGitlabCommitStatus name: 'restore', state: 'running', sha: commitId 
+            sh 'dotnet restore  --configfile NuGet.config'
+            updateGitlabCommitStatus name: 'restore', state: 'success', sha: commitId 
+        }
+    }catch(Exception ex){
+        updateGitlabCommitStatus name: 'restore', state: 'failed', sha: commitId
+        updateGitlabCommitStatus name: 'build', state: 'canceled', sha: commitId
+        updateGitlabCommitStatus name: 'test', state: 'canceled', sha: commitId
+        if(env.BRANCH_NAME == 'master'){
+            updateGitlabCommitStatus name: 'deploy', state: 'canceled', sha: commitId
+        }
+        updateGitlabCommitStatus name: 'clean', state: 'canceled', sha: commitId
+        currentBuild.result = 'FAILURE'
+        echo "RESULT: ${currentBuild.result}"
+        return 
+    }
 }
