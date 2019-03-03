@@ -39,9 +39,9 @@ node ('marcelbenders.de'){
 
     try{
         stage('Build'){
-            updateGitlabCommitStatus name: 'build', state: 'running', sha: commitId 
-            sh 'dotnet build -c Release'
-            updateGitlabCommitStatus name: 'build', state: 'success', sha: commitId
+            gitlabCommitStatus("build") {
+                sh 'dotnet build -c Release'
+           }
         }
     }catch(Exception ex){
         updateGitlabCommitStatus name: 'build', state: 'failed', sha: commitId
@@ -78,7 +78,7 @@ node ('marcelbenders.de'){
                 mvnHome = env.BUILD_NUMBER
                 packageN = "1.0.${mvnHome}"
                 updateGitlabCommitStatus name: 'pack', state: 'running', sha: commitId
-                dir('Home.HomeMatic.Domain/'){
+                dir('Home.Classes/'){
                     sh "dotnet pack -p:PackageVersion=${packageN} -c Release -o ./"
                     sh "dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k f4aa7680-0f0a-3d31-90c4-97e840c221f5 ./*${packageN}.nupkg"
                 }
