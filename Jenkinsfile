@@ -36,4 +36,25 @@ node ('marcelbenders.de'){
         echo "RESULT: ${currentBuild.result}"
         return 
     }
+
+    try{
+        stage('Build'){
+            updateGitlabCommitStatus name: 'build', state: 'running', sha: commitId 
+            sh 'dotnet build -c Release'
+            updateGitlabCommitStatus name: 'build', state: 'success', sha: commitId
+        }
+    }catch(Exception ex){
+        updateGitlabCommitStatus name: 'build', state: 'failed', sha: commitId
+        updateGitlabCommitStatus name: 'test', state: 'canceled', sha: commitId
+        if(env.BRANCH_NAME == 'master'){
+            updateGitlabCommitStatus name: 'pack', state: 'canceled', sha: commitId
+        }
+        updateGitlabCommitStatus name: 'clean', state: 'canceled', sha: commitId
+        currentBuild.result = 'FAILURE'
+        echo "RESULT: ${currentBuild.result}"
+        return
+    }
+
+
+
 }
