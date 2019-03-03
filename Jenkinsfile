@@ -1,4 +1,4 @@
-node {
+node ('marcelbenders.de'){
     def mvnHome
     def commitId
     def packageN
