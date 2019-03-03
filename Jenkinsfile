@@ -21,7 +21,7 @@ node ('marcelbenders.de'){
     try{
         stage('Restore') {
             updateGitlabCommitStatus name: 'restore', state: 'running', sha: commitId 
-            sh 'dotnet restore  --configfile NuGet.config'
+            sh 'dotnet restore  --configfile ./Home.Classes/NuGet.config'
             updateGitlabCommitStatus name: 'restore', state: 'success', sha: commitId 
         }
     }catch(Exception ex){
