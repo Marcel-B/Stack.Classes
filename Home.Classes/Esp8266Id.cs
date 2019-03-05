@@ -34,8 +34,11 @@ namespace com.b_velop.Home.Classes
         public static string HumidityFk() => "2063272:humidity";
         public static string TemperatureFk() => "2063272:temperature";
         public static string PressureFk() => "2063272:BMP_pressure";
-        public static string TemperatureBmpFk() => "2063272:BMP_temperature"; 
-
+        public static string TemperatureBmpFk() => "2063272:BMP_temperature";
+        public static string SignalFk() => "2063272:signal";
+        public static string MaxMicroFk() => "2063272:max_micro";//{ get; set; }
+        public static string MinMicroFk() => "2063272:min_micro";//{ get; set; }
+        public static string SamplesFk() => "2063272:samples";//{ get; set; }
         //public static Guid SdsP1Fk() => Guid.Parse("366AA12C-8C22-4293-82F2-44C3E6CDBB47");
         //public static Guid SdsP2Fk() => Guid.Parse("60AAF555-F83D-482B-B23A-507561FCC0D0");
         //public static Guid HumidityFk() => Guid.Parse("7528590B-3528-4722-96DA-7BF3A1EC2951");
