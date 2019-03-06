@@ -72,7 +72,7 @@ node ('marcelbenders.de'){
         return
     }
 
-        try{
+    try{
         if(env.BRANCH_NAME == 'master'){
             stage('NuGet'){
                 mvnHome = env.BUILD_NUMBER
@@ -93,7 +93,6 @@ node ('marcelbenders.de'){
         return
     }
 
-
     try{
         stage('Clean Up'){
             updateGitlabCommitStatus name: 'clean', state: 'running', sha: commitId
@@ -106,5 +105,4 @@ node ('marcelbenders.de'){
         echo "RESULT: ${currentBuild.result}"
         return
     }    
-
 }
