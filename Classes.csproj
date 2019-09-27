@@ -8,13 +8,11 @@
     <PackageLicenseUrl>https://b-velop.com</PackageLicenseUrl>
     <Owners>Marcel Benders</Owners>
     <PackageTags>Home</PackageTags>
-    <Title>Home.Classes</Title>
+    <Title>Classes</Title>
     <Description>Class Library</Description>
     <PackageId>Home.Classes</PackageId>
     <ReleaseVersion>1.0.3</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
-    <RootNamespace>com.b_velop.Home.Classes</RootNamespace>
-    <RestoreSources>https://nuget.marcelbenders.de/;https://api.nuget.org/v3/index.json</RestoreSources>
   </PropertyGroup>
   
   <ItemGroup>
