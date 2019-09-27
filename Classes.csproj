@@ -3,14 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>1.0.3</PackageVersion>
     <Authors>b-velop</Authors>
-    <PackageLicenseUrl>https://b-velop.com</PackageLicenseUrl>
     <Owners>Marcel Benders</Owners>
     <PackageTags>Home</PackageTags>
     <Title>Classes</Title>
     <Description>Class Library</Description>
-    <PackageId>Home.Classes</PackageId>
+    <PackageId>Stack.Classes</PackageId>
     <ReleaseVersion>1.0.3</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
