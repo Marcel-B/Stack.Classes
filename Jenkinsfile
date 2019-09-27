@@ -34,9 +34,6 @@ node ('marcelbenders.de'){
             sh 'dotnet test'
         }
     }catch(Exception ex){
-        if(env.BRANCH_NAME == 'master'){
-            updateGitlabCommitStatus name: 'pack', state: 'canceled', sha: commitId
-        }
         currentBuild.result = 'FAILURE'
         echo "RESULT: ${currentBuild.result}"
         return
