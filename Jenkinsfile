@@ -11,7 +11,7 @@ node ('marcelbenders.de'){
 
     try{
         stage('Restore') {
-            sh 'dotnet restore  --configfile ./Home.Classes/NuGet.config'
+            sh 'dotnet restore  --configfile NuGet.config'
         }
     }catch(Exception ex){
         currentBuild.result = 'FAILURE'
