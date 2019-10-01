@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <Authors>b-velop</Authors>
+    <Owners>Marcel Benders</Owners>
+    <PackageTags>Home</PackageTags>
+    <Title>Classes</Title>
+    <Description>Class Library</Description>
+    <PackageId>Stack.Classes</PackageId>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <AssemblyName>Stack.Classes</AssemblyName>
+    <RootNamespace>com.b_velop.stack.Classes</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <IntermediateOutputPath>obj\Debug\netstandard2.0</IntermediateOutputPath>
+    <OutputPath>bin\Debug\netstandard2.0</OutputPath>
+    <DefineConstants>TRACE;NETSTANDARD2_0;DEBUG;NETSTANDARD;NETSTANDARD2_1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <IntermediateOutputPath>obj\Release\netstandard2.0</IntermediateOutputPath>
+    <OutputPath>bin\Release\netstandard2.0</OutputPath>
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="NuGet.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="NuGet.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NuGet.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
