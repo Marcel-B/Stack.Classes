@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace com.b_velop.Home.Classes
+namespace com.b_velop.stack.Classes
 {
     internal static class ConverterValue
     {

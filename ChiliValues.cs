@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace com.b_velop.Home.Classes
+namespace com.b_velop.stack.Classes
 {
     public partial class ChiliValues
     {
