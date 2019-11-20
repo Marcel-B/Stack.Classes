@@ -15,3 +15,5 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build with dotnet
       run: dotnet build --configuration Release
+    - name: publish
+      run: dotnet pack -p:PackageVersion=1.1.1 -c Release -o ./ && dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k f4aa7680-0f0a-3d31-90c4-97e840c221f5
