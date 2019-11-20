@@ -18,4 +18,4 @@ jobs:
     - name: publish
       env:
         super_secret: ${{ secrets.NEXUS }} 
-      run: dotnet pack -p:PackageVersion=1.1.2 -c Release -o ./ && dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret ./Stack.Classes.1.1.2.nupkg
+      run: dotnet pack -p:PackageVersion=1.1.2 -c Release -o ./ && dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret *.nupkg
