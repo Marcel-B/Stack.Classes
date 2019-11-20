@@ -13,7 +13,7 @@
     <AssemblyName>Stack.Classes</AssemblyName>
     <RootNamespace>com.b_velop.stack.Classes</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
