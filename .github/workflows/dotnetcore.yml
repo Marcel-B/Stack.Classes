@@ -13,8 +13,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
-        super_secret: ${{ secrets.NEXUS }}  
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: publish
+      env:
+        super_secret: ${{ secrets.NEXUS }} 
       run: dotnet pack -p:PackageVersion=1.1.2 -c Release -o ./ && dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret ./Stack.Classes.1.1.2.nupkg
